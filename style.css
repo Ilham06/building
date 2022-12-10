@@ -40,6 +40,10 @@ Description: This Template is created for web template
 Default CS
 ========================================================================= */
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-size: 16px;
 	font-family: 'Nunito', sans-serif;
@@ -67,7 +71,7 @@ button:focus {
 	text-decoration: none;
 	border: none;
 	outline: 0;
-	color: #fff;
+	color: #7B5127;
 }
 ul,
 ol,
@@ -152,7 +156,7 @@ button:focus {
 }
 .algin-center {
 	text-align: center;
-	max-width: 510px;
+	max-width: 650px;
 	margin: 0 auto;
 	padding-bottom: 40px;
 }
@@ -227,6 +231,23 @@ button:focus {
 .price-btn::before {
 	background: #7B5127;
 }
+
+.font-poppins {
+	font-family: 'Poppins';
+}
+
+.w-600 {
+	font-weight: 600;
+}
+
+.w-700 {
+	font-weight: 700;
+}
+
+.main-color {
+	color: #7B5127;
+}
+
 /*==========================================================================
  Top Bar 
 ========================================================================== */
@@ -475,13 +496,25 @@ Banner
 ========================================================================== */
 
 .banner {
-	background-color: #051235;
+	background-image: url('assets/home-1-slide1.jpg');
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
 	position: relative;
 	overflow: hidden;
 }
+
+.banner::before {
+	background-color: rgba(0, 0, 0, 0.75);
+	bottom: 0;
+		content: "";
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0
+}
+
 .banner-content {
 	padding: 185px 0px;
 }
@@ -558,10 +591,10 @@ Services Css
 	cursor: pointer;
 }
 .service-item:hover {
-	background-color: #7B5127;
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	transform: translateY(-10px);
+	box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.2);
+		-webkit-box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.2);
 }
 .service-item i::before {
 	font-size: 70px;
@@ -588,18 +621,28 @@ Services Css
 	-o-transition: all 0.1s ease-in-out;
 	transition: all 0.1s ease-in-out;
 }
-.service-item:hover i,
-.service-item:hover h3,
-.service-item:hover p {
-	color: #fff;
-}
+
 /*==========================================================================
 Achievement Css
 ========================================================================== */
 
 .achievement {
 	background-color: #051235;
+	background-image: url('assets/home-1-testimonial-bg.jpg');
+	position: relative;
 }
+
+.achievement::before {
+	background-color: rgba(0, 0, 0, 0.75);
+	bottom: 0;
+	content: "";
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0
+}
+
 .achievement-left {
 	max-width: 430px;
 }
@@ -644,10 +687,29 @@ Achievement Css
 /*==========================================================================
 Work Css
 ========================================================================== */
+.our-work {
+	background-color: #FAFAFB;
+}
 
 .work-item {
 	position: relative;
 }
+
+.work-item::after {
+	background-color: rgba(0, 0, 0, 0.5);
+	bottom: 0;
+	content: "";
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+}
+
 .work-overly {
 	position: absolute;
 	left: 30px;
@@ -660,6 +722,7 @@ Work Css
 	-webkit-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
+	z-index: 2;
 }
 .work-overly h3 a,
 .work-overly p {
@@ -689,6 +752,11 @@ Work Css
 	opacity: 1;
 	bottom: 30px;
 }
+
+.work-item:hover::after {
+	opacity: 1;
+}
+
 .work-item {
 	width: 100%;
 	height: 100%;
@@ -698,9 +766,11 @@ Work Css
 	transform: scale(1);
 	transition: 0.3s ease-in-out;
 }
+
 .work-item:hover img {
 	transform: scale(1.1);
 }
+
 .work-details-item {
 	border-top: 1px solid #eaeaea;
 }
@@ -814,7 +884,7 @@ Quote Form
 }
 .home-left-bg {
 	position: absolute;
-	background: url("assets/img/quote-left-bg.jpg");
+	background: url("assets/about-1.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -1810,11 +1880,10 @@ Contact CSS
 	transition: all 0.3s ease-in-out;
 }
 .contact-item:hover {
-	background-color: #7B5127;
-	background-image: url(assets/img/con-bg.png);
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	transform: translateY(-10px);
+	box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.2);
 }
 .contact-item li {
 	margin-right: 18px;
@@ -1842,12 +1911,7 @@ Contact CSS
 .contact-item p:last-child {
 	margin: 0;
 }
-.contact-item:hover i::before,
-.contact-item:hover h3,
-.contact-item:hover span,
-.contact-item:hover p {
-	color: #fff;
-}
+
 .follow-us ul li {
 	display: inline-block;
 	margin-right: 10px;
