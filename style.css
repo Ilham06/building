@@ -265,6 +265,11 @@ button:focus {
 	font-weight: 600;
 	line-height: 28px;
 }
+
+.top-left li i {
+	font-weight: 400;
+}
+
 .top-left li i:before {
 	margin: 0;
 	padding: 0;
@@ -294,6 +299,9 @@ button:focus {
 Main Menu
 ========================================================================== */
 
+.logo {
+	max-width: 60px;
+}
 .header-menu {
 	background: #fff;
 	position: relative;
@@ -993,7 +1001,7 @@ Testimonial CSS
 	transform: translate(-50%, -50%);
 	background: #7B5127
 }
-.swiper-slide-active {
+.testimonial .swiper-slide-active {
 	border-bottom: 3px solid #7B5127;
 	border-radius: 4px;
 }
