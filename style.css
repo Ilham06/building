@@ -1714,19 +1714,18 @@ Scroll Top CSS
 ========================================================================== */
 
 .scroll-top {
-	background: #7B5127;
+	background: green;
 	bottom: 1%;
 	color: #fff;
 	font-size: 20px;
 	height: 40px;
 	line-height: 40px;
 	position: fixed;
-	right: 1%;
+	left: 1%;
 	text-align: center;
 	width: 40px;
 	z-index: 9;
 	cursor: pointer;
-	display: none;
 }
 .scroll-up:hover {
 	color: #fff;
