@@ -669,6 +669,10 @@ button:focus {
 	background: #7B5127;
 }
 
+.price-btn:hover {
+	color: #FFF;
+}
+
 .font-poppins {
 	font-family: 'Poppins';
 }
